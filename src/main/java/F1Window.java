@@ -34,6 +34,7 @@ public class F1Window extends javax.swing.JFrame {
         functionLabel = new javax.swing.JLabel();
         yearLabel = new javax.swing.JLabel();
         resultField = new javax.swing.JTextField();
+        setResizable(false);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
