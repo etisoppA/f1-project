@@ -61,8 +61,8 @@ public class F1Window extends javax.swing.JFrame {
 
         functionOptions.setBackground(new java.awt.Color(49, 47, 54));
         functionOptions.setForeground(new java.awt.Color(255, 255, 255));
-        functionOptions.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"Drivers' Champion",
-                "Constructors' Champion"}));
+        functionOptions.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"Drivers'",
+                "Constructors'"}));
 
         execute.setBackground(new java.awt.Color(49, 47, 54));
         execute.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -84,7 +84,7 @@ public class F1Window extends javax.swing.JFrame {
         functionLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         functionLabel.setForeground(new java.awt.Color(255, 255, 255));
         functionLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        functionLabel.setText("Function");
+        functionLabel.setText("Event");
 
         yearLabel.setBackground(new java.awt.Color(49, 47, 54));
         yearLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -171,11 +171,12 @@ public class F1Window extends javax.swing.JFrame {
     private void executeMouseClicked(java.awt.event.MouseEvent evt) {
         String year = yearOptions.getSelectedItem().toString();
         String function = functionOptions.getSelectedItem().toString();
-        if (function.equals("Constructors' Champion")) {
+        if (function.equals("Constructors'")) {
             if (year.equals("1950") || year.equals("1951") ||
                     year.equals("1952") || year.equals("1953") ||
                     year.equals("1954") || year.equals("1955") ||
                     year.equals("1956") || year.equals("1957")) {
+                yearOptions.setSelectedItem("1958");
                 year = "1958";
             }
             resultField.setText(F1ConstructorYear.getConstructorChampion(year));
