@@ -181,7 +181,7 @@ public class F1Window extends javax.swing.JFrame {
             resultField.setText(F1ConstructorYear.getConstructorChampion(year));
         } else {
             if (year.equals("2007")) {
-                resultField.setText("Kimi Raikkonen")
+                resultField.setText("Kimi Raikkonen");
             } else {
                 resultField.setText(F1DriversYear.getDriverChampion(year));
             }
